@@ -2,6 +2,7 @@ package ht.edu.fds.mbds.java;
 
 import ht.edu.fds.mbds.java.controllers.Parking;
 import ht.edu.fds.mbds.java.entities.Car;
+import ht.edu.fds.mbds.java.entities.VehiculeType;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,16 +21,10 @@ public class Main {
         System.out.println(parking);
 
         Car car = new Car("1234", "Toyota", "Rouge", 4);
-        parking.addVoiture(car);
+        parking.add(VehiculeType.CAR, car);
         System.out.println(parking);
 
-        parking.addVoiture(new Car("1234", "Toyota", "Rouge", 4));
-        System.out.println(parking);
-
-        parking.removeVoiture(car);
-        System.out.println(parking);
-
-        parking.addVoiture(new Car("1234", "Toyota", "Rouge", 4));
+        parking.add(VehiculeType.CAR, new Car("1234", "Toyota", "Rouge", 4));
         System.out.println(parking);
 
 

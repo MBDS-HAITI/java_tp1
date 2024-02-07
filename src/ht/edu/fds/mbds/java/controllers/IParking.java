@@ -2,21 +2,18 @@ package ht.edu.fds.mbds.java.controllers;
 
 import ht.edu.fds.mbds.java.entities.Car;
 import ht.edu.fds.mbds.java.entities.Moto;
+import ht.edu.fds.mbds.java.entities.Vehicule;
+import ht.edu.fds.mbds.java.entities.VehiculeType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public interface IParking {
-    int getMaxVoitures();
+    int getMax(VehiculeType type);
 
-    int getMaxMoto();
+    int getRemaining(VehiculeType type);
 
-    int getRemainingVoitures();
+    void add(VehiculeType type, Vehicule vehicule);
 
-    int getRemainingMoto();
-
-    void addVoiture(Car car);
-
-    void addMoto(Moto moto);
-
-    void removeVoiture(Car car);
-
-    void removeMoto(Moto moto);
+    void remove(VehiculeType type, Vehicule vehicule);
 }
